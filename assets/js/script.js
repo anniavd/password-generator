@@ -22,13 +22,13 @@ var arraySpecial = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', 
 function criteriaPassword() {
   //ask for the password lengh and a valid date
 
-  chararterLenght = prompt("How many characters would you like your password to contain?");
+  chararterLenght = prompt("How many characters would you like your password to contain? The password must be between 8 and 128 characters.");
 
   // Conditional Recursive Function Call
 
   //validate no in letter and lenght between 8-128 chararter
 
-  if((chararterLenght==="") || (chararterLenght ===null)|| (chararterLenght < 8) || (chararterLenght > 128)) {
+  if((isNaN(chararterLenght)) || (chararterLenght < 8) || (chararterLenght > 128)) {
     window.alert("You need to provide a valid answer! Please try again.");
     criteriaPassword();
 
@@ -104,7 +104,7 @@ function generatePassword() {
    // calculating the rest of characters to complete for the length pass
 
   var rest = chararterLenght - pass.length;
-
+   
   // loop  different for complete the lenght chararter pass
 
   for (var i = 0; i < rest; i++) {
