@@ -20,7 +20,7 @@ var arraySpecial= ['!',' " ','#','$','%','&','(',')','*','+', ',','-','.','/',' 
 function criteriaPassword(){
   //ask for the password lengh and a valid date
 
-  chararterLenght= prompt(" Choose a length of at least 8 characters and no more than 128 characters");
+  chararterLenght= prompt("How many characters would you like your password to contain?");
 
    // Conditional Recursive Function Call
  if ((chararterLenght ===" " ) || (chararterLenght === null) || (chararterLenght < 8) || (chararterLenght > 128) )
@@ -32,10 +32,10 @@ function criteriaPassword(){
  else{
     //criteria for password
 
-   confirmUppercase =confirm("Do you want your password have uppercase?");
-   confirmLowercase= confirm("Do you want your password have lowercase?");
-   confirmNumeric= confirm("Do you want your password have numeric?");
-   confirmSpecial = confirm("Do you want your password have special characters?");
+   confirmUppercase =confirm("Click OK to confirm including uppercase characters.");
+   confirmLowercase= confirm("Click OK to confirm including lowercase characters.");
+   confirmNumeric= confirm("Click OK to confirm including numeric character");
+   confirmSpecial = confirm("Click OK to confirm including special characters.");
 
    //debo llamar al metodo random luego pa q muestre.
  }
