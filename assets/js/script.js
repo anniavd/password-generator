@@ -14,7 +14,7 @@ var confirmSpecial = "";
 var arrayUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"];
 var arrayLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 var arrayNumeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var arraySpecial = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.','/',' :', ';', '<', '=', '>', '?', '@', '[', '^', '_','`', '{', '|','}', '~', ']'];
+var arraySpecial = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.','/',':', ';', '<', '=', '>', '?', '@', '[', '^', '_','`', '{', '|','}', '~', ']'];
 
 
 // data in
@@ -39,7 +39,16 @@ function criteriaPassword() {
     confirmUppercase = confirm("Click OK to confirm including uppercase characters.");
     confirmLowercase = confirm("Click OK to confirm including lowercase characters.");
     confirmNumeric = confirm("Click OK to confirm including numeric character");
-    confirmSpecial = confirm("Click OK to confirm including special characters.");      
+    confirmSpecial = confirm("Click OK to confirm including special characters.");  
+
+    //select at least a criteria 
+    // Conditional Recursive Function Call
+   
+    if((confirmUppercase===false ) && (confirmLowercase===false) && (confirmNumeric===false) && (confirmSpecial===false)){
+      window.alert("You must select at least a criteria for the password.")
+
+      criteriaPassword();
+   }
  }
 
 };
@@ -71,7 +80,7 @@ function generatePassword() {
   if (confirmLowercase) {
     var ramLo = arrayLowercase[Math.floor(Math.random() * arrayLowercase.length - 1)];
     pass.push(ramLo);
-    arrayTotal = arrayTotal.concat(arrayLowercase)
+    arrayTotal = arrayTotal.concat(arrayLowercase);
   }
 
    //checking entry criteria for Number
@@ -105,8 +114,6 @@ function generatePassword() {
     //return a  only string 
   return pass.join("");
 };
-
-
 
 
 // Get references to the #generate element
