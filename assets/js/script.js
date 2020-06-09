@@ -11,9 +11,9 @@ var confirmSpecial = "";
 
 // array for each password criteria
 
-var arrayUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"];
-var arrayLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
-var arrayNumeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var arrayUppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","V","W","X","Y","Z"];
+var arrayLowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","v","w","x","y","z"];
+var arrayNumeric = ["0","1","2","3","4","5","6","7","8","9"];
 var arraySpecial = ['!','"','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[','^','_','`','{','|','}','~',']'];
 
 
@@ -104,13 +104,14 @@ function generatePassword() {
    // calculating the rest of characters to complete for the length pass
 
   var rest = chararterLenght - pass.length;
-   
+ 
   // loop  different for complete the lenght chararter pass
 
   for (var i = 0; i < rest; i++) {
     var characterNew = arrayTotal[Math.floor(Math.random() * arrayTotal.length - 1)];
     pass.push(characterNew);
   }
+  console.log(pass);
     //return a  only string 
   return pass.join("");
 };
