@@ -8,7 +8,7 @@
 > - If the user want it to contain numbers.
 > - If the user want it to contain special characters.
 
- ![Homepage](/assets/images/web-site.jpg)
+ ![Homepage have a red botton for generator password](/assets/images/homepage.jpg)
  _____________________________________________________________________
  
 
