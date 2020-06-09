@@ -20,12 +20,12 @@ var arraySpecial = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', 
 // data in
 
 function criteriaPassword() {
+
   //ask for the password lengh and a valid date
 
   chararterLenght = prompt("How many characters would you like your password to contain? The password must be between 8 and 128 characters.");
 
   // Conditional Recursive Function Call
-
   //validate no in letter and lenght between 8-128 chararter
 
   if((isNaN(chararterLenght)) || (chararterLenght < 8) || (chararterLenght > 128)) {
