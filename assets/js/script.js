@@ -15,7 +15,7 @@ var arrayUppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O
 var arrayLowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","v","w","x","y","z"];
 var arrayNumeric = ["0","1","2","3","4","5","6","7","8","9"];
 var arraySpecial = ['!','"','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[','^','_','`','{','|','}','~',']'];
-
+console.log(arraySpecial);
 
 // data in
 
@@ -69,7 +69,7 @@ function generatePassword() {
   // save a random value and add the array pass
   
   if (confirmUppercase) {
-    var ramUp = arrayUppercase[Math.floor(Math.random() * arrayUppercase.length - 1)];
+    var ramUp = arrayUppercase[Math.floor(Math.random() * (arrayUppercase.length - 1))];
     pass.push(ramUp);
     arrayTotal = arrayTotal.concat(arrayUppercase);
 
@@ -78,16 +78,17 @@ function generatePassword() {
    // save a random value and add the array pass
 
   if (confirmLowercase) {
-    var ramLo = arrayLowercase[Math.floor(Math.random() * arrayLowercase.length - 1)];
+    var ramLo = arrayLowercase[Math.floor(Math.random() * (arrayLowercase.length - 1))];
     pass.push(ramLo);
     arrayTotal = arrayTotal.concat(arrayLowercase);
+   
   }
 
    //checking entry criteria for Number
    // save a random value and add the array pass
 
   if (confirmNumeric) {
-    var ramNu = arrayNumeric[Math.floor(Math.random() * arrayNumeric.length - 1)];
+    var ramNu = arrayNumeric[Math.floor(Math.random() * (arrayNumeric.length - 1))];
     pass.push(ramNu);
     arrayTotal = arrayTotal.concat(arrayNumeric);
   }
@@ -96,9 +97,10 @@ function generatePassword() {
    // save a random value and add the array pass
 
   if (confirmSpecial) {
-    var ramSp = arraySpecial[Math.floor(Math.random() * arraySpecial.length - 1)];
+    var ramSp = arraySpecial[Math.floor(Math.random() * (arraySpecial.length - 1))];
     pass.push(ramSp);
     arrayTotal = arrayTotal.concat(arraySpecial);
+    console.log("arrayTotal: " + arrayTotal);
   }
    
    // calculating the rest of characters to complete for the length pass
@@ -108,7 +110,8 @@ function generatePassword() {
   // loop  different for complete the lenght chararter pass
 
   for (var i = 0; i < rest; i++) {
-    var characterNew = arrayTotal[Math.floor(Math.random() * arrayTotal.length - 1)];
+    var index = Math.floor(Math.random() * (arrayTotal.length - 1))
+    var characterNew = arrayTotal[index];
     pass.push(characterNew);
   }
   console.log(pass);
