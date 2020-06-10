@@ -113,8 +113,7 @@ function generatePassword() {
     var characterNew = arrayTotal[index];
     pass.push(characterNew);
   }
-  //console.log(pass);
-    //return a  only string 
+     //return a  only string 
   return pass.join("");
 };
 
