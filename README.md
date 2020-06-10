@@ -17,4 +17,4 @@ The user must enter a quantity between the valid values **otherwise** he will co
 
 When the user has selected their password criteria, then they will be shown their random password based on the selected length and criteria.*The user must choose at least one criterion*.
 
-Visit the site! [Password Generator ](https://anniavd.github.io//)
+Visit the site! [Password Generator ](https://anniavd.github.io/password-generator/)
