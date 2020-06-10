@@ -15,7 +15,7 @@ var arrayUppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O
 var arrayLowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","v","w","x","y","z"];
 var arrayNumeric = ["0","1","2","3","4","5","6","7","8","9"];
 var arraySpecial = ['!','"','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','[','^','_','`','{','|','}','~',']'];
-console.log(arraySpecial);
+
 
 // data in
 
@@ -100,7 +100,6 @@ function generatePassword() {
     var ramSp = arraySpecial[Math.floor(Math.random() * (arraySpecial.length - 1))];
     pass.push(ramSp);
     arrayTotal = arrayTotal.concat(arraySpecial);
-    console.log("arrayTotal: " + arrayTotal);
   }
    
    // calculating the rest of characters to complete for the length pass
@@ -114,7 +113,7 @@ function generatePassword() {
     var characterNew = arrayTotal[index];
     pass.push(characterNew);
   }
-  console.log(pass);
+  //console.log(pass);
     //return a  only string 
   return pass.join("");
 };
